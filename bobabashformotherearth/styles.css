@@ -1,0 +1,137 @@
+h1 {
+    color: darkgreen;
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+}
+
+body { /* Overall page of the website */
+    background-color: #0c4a02; 
+    text-align: center;
+    font-family:'Chewy';
+}
+
+p {
+    color: #2e2e2e;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #cedee7;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timeline {
+    position: relative;
+    max-width: 100%;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 3px solid #3498db;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #3498db;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: background-color 0.3s;
+}
+
+.timeline-item:hover::before {
+    background-color: #e74c3c;
+}
+
+.timeline-title {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-title::after {
+    content: '▼';
+    font-size: 0.8em;
+    color: #7f8c8d;
+    transition: transform 0.3s;
+}
+
+.timeline-item.active .timeline-title::after {
+    transform: rotate(180deg);
+}
+
+.timeline-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    opacity: 0;
+    background-color: #f9f9f9;
+    border-left: 2px solid #bdc3c7;
+    padding: 0 15px;
+    margin-top: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+.timeline-item.active .timeline-content {
+    max-height: 300px; 
+    opacity: 1;
+    padding: 15px;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* 3. Credits Section Styling */
+.credits-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 2px dashed #cddae3;
+    font-size: 0.85em;
+    color: #034b3b;
+}
+
+.credits-section h3 {
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.credits-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.credits-section li {
+    margin-bottom: 8px;
+}
+
+.credits-section a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.credits-section a:hover {
+    text-decoration: underline;
+}
